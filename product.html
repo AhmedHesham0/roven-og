@@ -80,9 +80,15 @@
           </a>
           <a href="product.html" class="btn btn--primary nav__cta" id="nav-shop-cta">Shop Now</a>
         </div>
-        <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav__mobile-controls">
+          <a href="cart.html" class="nav__cart-link" aria-label="View cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="cart-badge" style="display:none">0</span>
+          </a>
+          <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -91,7 +97,6 @@
     <a href="about.html"   class="nav__link">About</a>
     <a href="faq.html"     class="nav__link">FAQ</a>
     <a href="contact.html" class="nav__link">Contact</a>
-    <a href="cart.html" class="nav__link">Cart <span class="cart-badge" style="display:none">0</span></a>
     <a href="product.html" class="btn btn--primary btn--full" style="margin-top:8px">Shop Now — $23.99</a>
   </div>
 
