@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roven — Hydration & Feeding Gear for Dogs</title>
+  <meta name="description" content="Roven makes premium outdoor gear for dogs. The Trail Companion 2-in-1 portable water bottle and bowl keeps your dog hydrated on every walk, hike, and road trip." />
+  <meta name="theme-color" content="#2D4A3E" />
+  <link rel="canonical" href="https://roven.website/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roven — Hydration & Feeding Gear for Dogs" />
+  <meta property="og:description" content="Premium outdoor gear for dogs. Hydration and feeding, wherever the trail takes you." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roven.website/" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    /* Page-specific overrides */
+    .product-teaser {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      background: var(--c-white);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .product-teaser__img { aspect-ratio: unset; min-height: 480px; }
+    .product-teaser__body {
+      padding: var(--s-64) var(--s-48);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .product-teaser__body .label { margin-bottom: var(--s-16); }
+    .product-teaser__body h2 { margin-bottom: var(--s-16); }
+    .product-teaser__body > p { margin-bottom: var(--s-32); }
+    .product-teaser__body .price-row {
+      font-family: var(--f-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--c-green);
+      margin-bottom: var(--s-32);
+    }
+    .product-bullets {
+      margin-bottom: var(--s-32);
+    }
+    .product-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-12);
+      padding-block: var(--s-10);
+      border-bottom: 1px solid var(--c-border);
+      font-size: 0.9375rem;
+      color: var(--c-charcoal);
+    }
+    .product-bullets li:first-child { border-top: 1px solid var(--c-border); }
+    .check { color: var(--c-green); flex-shrink: 0; margin-top: 1px; }
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-80);
+      align-items: center;
+    }
+    .about-split__img {
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .about-split__img img { width: 100%; height: 100%; object-fit: cover; }
+    .about-split__body .label { margin-bottom: var(--s-16); }
+    .about-split__body h2 { margin-bottom: var(--s-24); }
+    .about-split__body p { margin-bottom: var(--s-20); }
+    .mosaic-section .container { display: grid; grid-template-columns: 3fr 2fr; gap: var(--s-12); align-items: stretch; }
+    .mosaic-tall { border-radius: var(--r-xl); overflow: hidden; }
+    .mosaic-tall img { width: 100%; height: 100%; object-fit: cover; min-height: 420px; }
+    .mosaic-stack { display: flex; flex-direction: column; gap: var(--s-12); }
+    .mosaic-stack-item { border-radius: var(--r-lg); overflow: hidden; flex: 1; }
+    .mosaic-stack-item img { width: 100%; height: 100%; object-fit: cover; min-height: 196px; }
+
+    @media (max-width: 900px) {
+      .product-teaser { grid-template-columns: 1fr; }
+      .product-teaser__img { min-height: 280px; }
+      .product-teaser__body { padding: var(--s-40) var(--s-32); }
+      .about-split { grid-template-columns: 1fr; }
+      .mosaic-section .container { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .product-teaser__body { padding: var(--s-32) var(--s-24); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Roven home">Roven</a>
+        <div class="nav__links" role="list">
+          <a href="product.html" class="nav__link" role="listitem">Shop</a>
+          <a href="about.html"   class="nav__link" role="listitem">About</a>
+          <a href="faq.html"     class="nav__link" role="listitem">FAQ</a>
+          <a href="contact.html" class="nav__link" role="listitem">Contact</a>
+        </div>
+        <div class="nav__cta-wrap">
+          <a href="cart.html" class="nav__cart-link" aria-label="View cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="cart-badge" style="display:none">0</span>
+          </a>
+          <a href="product.html" class="btn btn--primary nav__cta" id="nav-shop-cta">Shop Now</a>
+        </div>
+        <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="product.html" class="nav__link">Shop</a>
+    <a href="about.html"   class="nav__link">About</a>
+    <a href="faq.html"     class="nav__link">FAQ</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="cart.html" class="nav__link">Cart <span class="cart-badge" style="display:none">0</span></a>
+    <a href="product.html" class="btn btn--primary btn--full" style="margin-top:8px">Shop Now — $23.99</a>
+  </div>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" style="background-image: url('assets/images/lifestyle-yellow.jpg');" role="img" aria-label="Dog drinking from Roven Trail Companion on a forest trail"></div>
+      <div class="hero__overlay"></div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="label hero__label">Outdoor Gear for Dogs</p>
+          <h1 class="hero__title">Hydration and feeding,<br><em>wherever the trail takes you.</em></h1>
+          <p class="hero__sub">The Roven Trail Companion — a 2-in-1 portable water bottle and bowl for dogs who don't sit still.</p>
+          <div class="hero__actions">
+            <a href="product.html" class="btn btn--primary btn--lg" id="hero-shop-btn">Shop the Trail Companion</a>
+            <a href="about.html"   class="btn btn--outline-white btn--lg" id="hero-about-btn">Our Story</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══ TRUST BAR ═══ -->
+    <div class="trust-bar" role="complementary" aria-label="Trust signals">
+      <div class="container">
+        <div class="trust-bar__inner">
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Ships within 1–3 days
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            30-Day Satisfaction Guarantee
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Loved by dog owners everywhere
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Order tracking included
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PRODUCT TEASER ═══ -->
+    <section class="section" aria-labelledby="product-teaser-heading">
+      <div class="container">
+        <div class="product-teaser fade-up">
+          <div class="product-teaser__img">
+            <img src="assets/images/product-grey-studio.jpg" alt="Roven Trail Companion — 2-in-1 portable dog water bottle with detachable bowl" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="product-teaser__body">
+            <p class="label">Flagship Product</p>
+            <h2 id="product-teaser-heading">Roven Trail Companion</h2>
+            <p>Every walk, hike, or road trip — your dog is ready. One compact unit. Bottle and bowl in one. No extra gear, no mess, no hunting for water.</p>
+            <div class="price-row">$23.99 <span style="font-size:0.9rem;color:var(--c-stone);font-weight:400;font-family:var(--f-sans);">USD</span></div>
+            <ul class="product-bullets">
+              <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>2-in-1 bottle and bowl — one compact unit</li>
+              <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Large 1000ml capacity for full-day hydration</li>
+              <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Leak-proof seal — safe in bag or car</li>
+              <li><svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Clips to leash, bag, or belt loop</li>
+            </ul>
+            <a href="product.html" class="btn btn--primary btn--lg" id="teaser-shop-btn">View Product</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHY ROVEN ═══ -->
+    <section class="section section--cream" aria-labelledby="why-roven-heading">
+      <div class="container">
+        <div class="section-header section-header--center fade-up">
+          <p class="label">Why Roven</p>
+          <h2 id="why-roven-heading">Built for every adventure</h2>
+          <p>Premium outdoor gear shouldn't be an afterthought. Roven makes the kind of gear that keeps up — whether you're hitting the trails or grabbing a coffee.</p>
+        </div>
+        <div class="grid-3">
+          <div class="feature-item fade-up fade-up-delay-1">
+            <div class="feature-item__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-10"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <h4>Trail-ready design</h4>
+            <p>Lightweight, clip-able, and one-hand operable. Designed for real life, not just the box.</p>
+          </div>
+          <div class="feature-item fade-up fade-up-delay-2">
+            <div class="feature-item__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Built to last</h4>
+            <p>Food-grade, BPA-free materials. Leak-proof seal. A bottle built to go everywhere you go.</p>
+          </div>
+          <div class="feature-item fade-up fade-up-delay-3">
+            <div class="feature-item__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h4>Dog-first thinking</h4>
+            <p>Simple enough for one hand, smart enough for the trail. Your dog drinks — you move on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LIFESTYLE MOSAIC ═══ -->
+    <section class="section mosaic-section" aria-label="Lifestyle imagery">
+      <div class="container">
+        <div class="mosaic-tall fade-up">
+          <img src="assets/images/lifestyle-yellow.jpg" alt="Dog drinking water from Roven Trail Companion on a hiking trail" loading="lazy" />
+        </div>
+        <div class="mosaic-stack">
+          <div class="mosaic-stack-item fade-up fade-up-delay-1">
+            <img src="assets/images/product-white-studio.jpg" alt="Dog in car on a road trip, head out the window" loading="lazy" />
+          </div>
+          <div class="mosaic-stack-item fade-up fade-up-delay-2">
+            <img src="assets/images/product-yellow-studio.jpg" alt="Roven Trail Companion clipped to a hiking backpack strap" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT TEASER ═══ -->
+    <section class="section section--cream" aria-labelledby="about-teaser-heading">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__img fade-up">
+            <img src="assets/images/lifestyle-dog-drinking.jpg" alt="Woman and her dog on a mountain trail at golden hour" loading="lazy" />
+          </div>
+          <div class="about-split__body fade-up fade-up-delay-1">
+            <p class="label">Our Story</p>
+            <h2 id="about-teaser-heading">Built for the dogs who don't sit still.</h2>
+            <p>Roven started with a simple frustration: every walk, hike, or road trip meant juggling a water bottle in one hand and a bowl in the other — assuming you remembered the bowl at all.</p>
+            <p>We believe outdoor gear for dogs shouldn't be an afterthought. It should be as ready for adventure as your dog is.</p>
+            <a href="about.html" class="btn btn--outline" id="home-about-btn">Read Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REVIEWS ═══ -->
+    <section class="section" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header section-header--center fade-up">
+          <p class="label">Customer Reviews</p>
+          <h2 id="reviews-heading">Dog owners love it</h2>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card fade-up fade-up-delay-1">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"Finally a water bottle I can actually take on trails without a second bag. My rescue lab Bruno drank from it the first time like he'd always used it."</p>
+            <p class="review-card__author">— Sarah K., Colorado</p>
+          </div>
+          <div class="review-card fade-up fade-up-delay-2">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"Clip it on the bag, forget about it, use it when you need it. It doesn't leak in my backpack which was my biggest concern. 10/10."</p>
+            <p class="review-card__author">— Marcus T., Oregon</p>
+          </div>
+          <div class="review-card fade-up fade-up-delay-3">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">"I keep one in the car and one clipped to my running vest. My golden goes through the whole thing on a 5-mile run. Worth every penny."</p>
+            <p class="review-card__author">— Jamie L., Vermont</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <section class="section section--green" aria-label="Call to action">
+      <div class="container text-center">
+        <p class="label" style="color:var(--c-sand-light);margin-bottom:var(--s-16);" class="fade-up">Ready to go?</p>
+        <h2 style="color:var(--c-white);margin-bottom:var(--s-16);" class="fade-up">Your dog is already waiting.</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:var(--s-32);max-width:480px;margin-inline:auto;" class="fade-up">Get the Trail Companion for $23.99 — with free tracking, 30-day guarantee, and ships in 1–3 days.</p>
+        <a href="product.html" class="btn btn--outline-white btn--lg fade-up" id="cta-banner-btn">Shop Now — $23.99</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-logo">Roven</div>
+          <p class="footer__tagline">Hydration and feeding, wherever the trail takes you.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Shop</p>
+          <ul class="footer__links">
+            <li><a href="product.html" class="footer__link">Trail Companion</a></li>
+            <li><a href="cart.html" class="footer__link">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Help</p>
+          <ul class="footer__links">
+            <li><a href="faq.html"      class="footer__link">FAQ</a></li>
+            <li><a href="contact.html"  class="footer__link">Contact Us</a></li>
+            <li><a href="shipping.html" class="footer__link">Shipping Policy</a></li>
+            <li><a href="returns.html"  class="footer__link">Returns & Refunds</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Legal</p>
+          <ul class="footer__links">
+            <li><a href="privacy.html"  class="footer__link">Privacy Policy</a></li>
+            <li><a href="terms.html"    class="footer__link">Terms of Service</a></li>
+            <li><a href="about.html"    class="footer__link">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2024 Roven. All rights reserved.</span>
+        <span>roven.website</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

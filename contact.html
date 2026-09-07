@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Roven</title>
+  <meta name="description" content="Have a question about your Roven order or our products? Get in touch — we respond within 1–2 business days." />
+  <link rel="canonical" href="https://roven.website/contact" />
+  <link rel="stylesheet" href="css/index.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--s-64);
+      align-items: start;
+    }
+    .contact-info { padding-top: var(--s-8); }
+    .contact-info h2 { font-size: 1.9rem; margin-bottom: var(--s-16); }
+    .contact-info > p { margin-bottom: var(--s-32); }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-16);
+      padding-block: var(--s-16);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .contact-detail:first-of-type { border-top: 1px solid var(--c-border); }
+    .contact-detail__icon {
+      width: 40px;
+      height: 40px;
+      background: var(--c-cream);
+      border-radius: var(--r-pill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--c-green);
+      flex-shrink: 0;
+    }
+    .contact-detail__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-stone);
+      margin-bottom: 2px;
+    }
+    .contact-detail__value { font-size: 0.9375rem; color: var(--c-charcoal); }
+    .contact-form-card {
+      background: var(--c-white);
+      border-radius: var(--r-xl);
+      padding: var(--s-48);
+      box-shadow: var(--shadow-md);
+    }
+    .contact-form-card h3 { font-size: 1.4rem; margin-bottom: var(--s-32); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-16); }
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .contact-form-card { padding: var(--s-32) var(--s-24); }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Roven home">Roven</a>
+        <div class="nav__links" role="list">
+          <a href="product.html" class="nav__link" role="listitem">Shop</a>
+          <a href="about.html"   class="nav__link" role="listitem">About</a>
+          <a href="faq.html"     class="nav__link" role="listitem">FAQ</a>
+          <a href="contact.html" class="nav__link" role="listitem">Contact</a>
+        </div>
+        <div class="nav__cta-wrap">
+          <a href="cart.html" class="nav__cart-link" aria-label="View cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="cart-badge" style="display:none">0</span>
+          </a>
+          <a href="product.html" class="btn btn--primary nav__cta" id="nav-shop-cta">Shop Now</a>
+        </div>
+        <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="product.html" class="nav__link">Shop</a>
+    <a href="about.html"   class="nav__link">About</a>
+    <a href="faq.html"     class="nav__link">FAQ</a>
+    <a href="contact.html" class="nav__link">Contact</a>
+    <a href="cart.html" class="nav__link">Cart <span class="cart-badge" style="display:none">0</span></a>
+    <a href="product.html" class="btn btn--primary btn--full" style="margin-top:8px">Shop Now — $23.99</a>
+  </div>
+
+  <main>
+    <section class="page-hero" aria-label="Contact header">
+      <div class="container">
+        <p class="label">Get in Touch</p>
+        <h1>Contact Us</h1>
+        <p>Questions, feedback, or just want to say hi — we're here and respond within 1–2 business days.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact form">
+      <div class="container">
+        <div class="contact-layout">
+
+          <div class="contact-info fade-up">
+            <p class="label" style="margin-bottom:var(--s-12)">We're here to help</p>
+            <h2>Let's talk.</h2>
+            <p>Whether it's a question about your order, a product question, or something else entirely — drop us a message and we'll get back to you quickly.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail__label">Email</div>
+                <div class="contact-detail__value">roven.support@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail__label">Response Time</div>
+                <div class="contact-detail__value">Within 1–2 business days</div>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail__label">Returns</div>
+                <div class="contact-detail__value">30-day satisfaction guarantee</div>
+              </div>
+            </div>
+
+            <div style="margin-top:var(--s-32)">
+              <p style="font-size:0.875rem;margin-bottom:var(--s-12)">Or check our FAQ for quick answers:</p>
+              <a href="faq.html" class="btn btn--outline" id="contact-faq-btn">Browse FAQ</a>
+            </div>
+          </div>
+
+          <div class="contact-form-card fade-up fade-up-delay-1">
+            <h3>Send us a message</h3>
+            <form id="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-first-name">First Name</label>
+                  <input type="text" id="contact-first-name" name="first_name" class="form-control" placeholder="Jane" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-last-name">Last Name</label>
+                  <input type="text" id="contact-last-name" name="last_name" class="form-control" placeholder="Smith" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="jane@example.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <select id="contact-subject" name="subject" class="form-control">
+                  <option value="">Select a topic...</option>
+                  <option value="order">Order & Tracking</option>
+                  <option value="return">Returns & Refunds</option>
+                  <option value="product">Product Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" class="form-control" placeholder="Tell us how we can help..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full btn--lg" id="contact-submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-logo">Roven</div>
+          <p class="footer__tagline">Hydration and feeding, wherever the trail takes you.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Shop</p>
+          <ul class="footer__links"><li><a href="product.html" class="footer__link">Trail Companion</a></li><li><a href="cart.html" class="footer__link">Cart</a></li></ul>
+        </div>
+        <div>
+          <p class="footer__heading">Help</p>
+          <ul class="footer__links">
+            <li><a href="faq.html"      class="footer__link">FAQ</a></li>
+            <li><a href="contact.html"  class="footer__link">Contact Us</a></li>
+            <li><a href="shipping.html" class="footer__link">Shipping Policy</a></li>
+            <li><a href="returns.html"  class="footer__link">Returns & Refunds</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Legal</p>
+          <ul class="footer__links">
+            <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+            <li><a href="terms.html"   class="footer__link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2024 Roven. All rights reserved.</span>
+        <span>roven.website</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
