@@ -535,21 +535,13 @@ p {
 }
 
 .nav__mobile-controls {
-  display: contents;
-}
-
-.nav__mobile-controls .nav__cart-link {
   display: none;
+  align-items: center;
+  gap: var(--s-16);
 }
 
 @media (max-width: 640px) {
   .nav__mobile-controls {
-    display: flex;
-    align-items: center;
-    gap: var(--s-16);
-  }
-
-  .nav__mobile-controls .nav__cart-link {
     display: flex;
   }
 }
